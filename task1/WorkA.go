@@ -104,3 +104,31 @@ func reverseArray(ss []rune) []rune {
 	}
 	return swapArr
 }
+
+func FrequentlyMaxChar(content *[]string) string {
+	if len(*content) <= 0 {
+		return ""
+	}
+	var maxItem = ""
+	for _, v := range *content {
+		if len(v) > len(maxItem) {
+			maxItem = v
+		}
+	}
+	maxArray := []string{}
+	arrSize := len(*content)
+	for i := 0; i < len(maxItem); i++ {
+		//current char
+		var chr = maxItem[i]
+		var count = 0
+		for _, c := range *content {
+			if (len(c) >= i+1) && (chr == c[i]) {
+				count++
+			}
+		}
+		if count == arrSize {
+			maxArray = append(maxArray, string(chr))
+		}
+	}
+	return strings.Join(maxArray, "")
+}

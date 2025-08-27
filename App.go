@@ -16,4 +16,8 @@ func main() {
 	var testNum = 12221
 	ishw := task1.IsHwNumber(testNum)
 	fmt.Println("数字", testNum, " 是否为回文:", ishw)
+
+	var ss = []string{"flat", "flower", "fliter"}
+	res := task1.FrequentlyMaxChar(&ss)
+	fmt.Println("最长公共前缀：", res)
 }
