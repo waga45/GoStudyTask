@@ -80,7 +80,7 @@ func main() {
 	//time.Sleep(1000 * time.Millisecond)
 	//runtime.Gosched()
 	//ch := make(chan bool)
-	task2.ChanAndCond()
+	task2.AtomicUse()
 	//<-ch
 	fmt.Println("mainFun")
 }
