@@ -3,6 +3,7 @@ package main
 import (
 	"StudyTask/study"
 	"StudyTask/task1"
+	"StudyTask/task3"
 	"StudyTask/utils"
 	"fmt"
 	"runtime"
@@ -79,7 +80,7 @@ func main() {
 	//time.Sleep(1000 * time.Millisecond)
 	//runtime.Gosched()
 	//ch := make(chan bool)
-	study.SQLXTest()
+	task3.TestGorm()
 	//<-ch
 	fmt.Println("mainFun")
 }
